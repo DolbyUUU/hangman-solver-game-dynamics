@@ -56,9 +56,9 @@ To handle disjoint datasets, the **iterative rollback strategy** ensures that gu
 
 ---
 
-## Directory and Scripts
+## 📂 Directory and Scripts
 
-### **Main Scripts**
+### 📜 **Main Scripts**
 
 - **`hangman_api_user.ipynb`**: An API-based version of the main script that initializes the Hangman solver and runs simulations.
 - **`main_local.ipynb`**: A local version of the main script that initializes the Hangman solver and runs simulations.
@@ -67,7 +67,7 @@ To handle disjoint datasets, the **iterative rollback strategy** ensures that gu
 - **`rollback.py`**: Implements the rollback strategy for refining guesses based on training word similarity.
 - **`preprocessing.py`**: Filters and preprocesses the word dataset to create a cleaned version for training.
 
-### **BERT Fine-Tuning and Evaluation**
+### 🤖 **BERT Fine-Tuning and Evaluation**
 
 - **`bert-base-ver1/`**: Contains scripts to fine-tune with extended pretrained BERT tokenizer, test, and evaluate BERT-base models.
 - **`bert-base-ver2/`**: Contains scripts to fine-tune with custom tokenizer, test, and evaluate BERT-base models.
@@ -81,12 +81,12 @@ To handle disjoint datasets, the **iterative rollback strategy** ensures that gu
   - **`vocab.txt`**: Token vocabulary for the tokenizer.
   - **`log_base.log`**: Logs of fine-tuning progress.
 
-### **Dictionary Statistics**
+### 📊 **Dictionary Statistics**
 
 - **`datasets/dictionary_statistics.py `**: Calculates word statistics, including length distribution, letter frequencies, and patterns.
 - **`datasets/dictionary_word_form_analysis.py`**: Analyzes parts of speech in words (nouns, verbs, adjectives).
 
-## Datasets
+### 📂 Datasets
 
 - **`datasets/words_250000_train.txt`**: Training dataset of 250,000 words.
 - **`datasets/words_250000_train_cleaned.txt`**: Training dataset of 250,000 words after data preprocessing.
