@@ -1,8 +1,60 @@
-# Game-Dynamics-Aware Hangman Solver
+# 🎮 Game-Dynamics-Aware Hangman Solver
 
-## Overview
+## 🚀 Overview
 
-This project implements a **Game-Dynamics-Aware Hangman Solver** that uses algorithms and models including **weighted n-grams**, **information entropy**, and a **fine-tuned BERT** to optimize letter-guessing during the **opening, midgame, and endgame** of the Hangman game.
+**Game-Dynamics-Aware Hangman Solver** is an advanced AI-powered solution for solving the classic Hangman game. This project integrates **Weighted N-Grams**, **Information Entropy**, and a **Fine-Tuned BERT Model** to achieve exceptional performance on disjoint test datasets. By leveraging **game-dynamics-aware strategies** and an **iterative rollback mechanism**, it offers a robust, high-accuracy guessing system for Hangman.
+
+---
+
+## ✨ Features
+
+- 🧠 **Game-Dynamics-Aware Solver**:
+  - Adapts dynamically to different game phases:
+    - **Opening Phase**: Focuses on exploration and information gain.
+    - **Midgame Phase**: Leverages statistical patterns using **Weighted N-Grams**.
+    - **Endgame Phase**: Utilizes a **Fine-Tuned BERT Model** for precise contextual predictions.
+  - Combines multiple strategies for maximum efficiency:
+    - **Weighted N-Grams Model**: Captures letter co-occurrence patterns.
+    - **Information Entropy Model**: Maximizes information gain in early guesses.
+    - **Fine-Tuned BERT Model**: Predicts masked letters using contextual knowledge.
+
+- 🔄 **Iterative Rollback Strategy**:
+  - Ensures valid guesses even on disjoint training and testing datasets.
+  - Reduces errors by iteratively evaluating and rolling back incorrect guesses.
+
+- 📊 **High Success Rates**:
+  - **Local tests**: 74.4% success rate on disjoint datasets.
+  - **API simulations**: 65.5% success rate.
+
+- ⚙️ **Customizable Parameters**:
+  - Tune n-gram weights, entropy thresholds, and rollback similarity parameters for optimal performance.
+
+---
+
+## 📋 How It Works
+
+The Hangman Solver progresses through three game phases:
+
+| 🎯 Phase      | 🔍 Objective               | 🛠️ Methodology                                      |
+|---------------|----------------------------|----------------------------------------------------|
+| **Opening**   | Exploration                | Information Entropy                                |
+| **Midgame**   | Statistical Exploitation   | Weighted N-Grams                                   |
+| **Endgame**   | Contextual Prediction      | Fine-Tuned BERT                                    |
+
+### 🧩 Dynamic Strategy Selection
+
+The solver dynamically selects the appropriate strategy based on the current game state:
+- ✅ Number of known letters.
+- ❓ Number of unknown slots.
+- ❌ Number of incorrect guesses.
+
+### 🔄 Rollback Mechanism
+
+To handle disjoint datasets, the **iterative rollback strategy** ensures that guesses are valid and adjusts predictions based on similarity thresholds.
+
+> **Note**: Due to the large file size, the `model.safetensors` files for two versions of the fine-tuned BERT models are **not uploaded** in this repository. You will need to fine-tune BERT locally or provide your own pre-trained models.
+
+---
 
 ## Directory and Scripts
 
